@@ -33,7 +33,7 @@ const toggleMenu = () => {
           {navlinks.map((nav, index) => (
             <ul>
               <li>
-                <a key={index} href={nav.href}>
+                <a className='hover:bg-orange-400 px-2 py-1  rounded-md' key={index} href={nav.href}>
                   {nav.label}
                 </a>
               </li>
@@ -47,7 +47,7 @@ const toggleMenu = () => {
         </div>
       </div>
       <div
-        className="mx-2 my-2 bg-blue-900 flex flex-col w-[100vw] text-lg text-white font-semibold lg:hidden items-center absolute top-[61px] z-10
+        className="mx-2 my-2 bg-blue-900 flex flex-col w-[95vw] text-lg text-white rounded-2xl font-semibold lg:hidden items-center fixed top-[61px] z-10
     "
       >
         {isOpen
