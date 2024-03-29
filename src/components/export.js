@@ -170,4 +170,17 @@ export const client = [
     feedback:
       "The WP Estate team did an outstanding job helping me buy my first home. The high level of service and dedication",
   },
-];
+]
+
+
+export const navlinks = [
+
+    {label: "HOME", href: "#home" , },
+    {label: "ABOUT", href: "#about" , },
+    {label: "PROPERTIES", href: "#properties" , },
+    {label: "SERVICES", href: "#services" , },
+    {label: "TESTIMONIALS", href: "#testimonials" , },
+    {label: "CONTACTS", href: "#contacts" , }
+
+
+]
