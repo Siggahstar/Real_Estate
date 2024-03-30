@@ -6,6 +6,7 @@ import Clients from "./sections/Clients";
 import Contact from "./sections/Contact";
 import Hero from "./sections/Hero";
 import PopularAreas from "./sections/PopularAreas";
+import Properties from "./sections/Properties";
 import Services from "./sections/Services";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
           <Hero />
           <About />
           <PopularAreas />
+          <Properties />
           <Services />
           <Clients />
           <Contact />
