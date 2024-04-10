@@ -1,3 +1,4 @@
+import React from "react";
 import { DarkModeProvider } from "./components/DarkModeContext";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
@@ -8,22 +9,36 @@ import Hero from "./sections/Hero";
 import PopularAreas from "./sections/PopularAreas";
 import Properties from "./sections/Properties";
 import Services from "./sections/Services";
+import { useState } from "react";
+import CardPage from "./components/CardPage";
 
 export default function App() {
-  return (
-    <>
-      <DarkModeProvider>
-          <Nav />
-          <Hero />
-          <About />
-          <PopularAreas />
-          <Properties />
-          <Services />
-          <Clients />
-          <Contact />
-          <Footer />
+  const [card, setCard] = useState([]);
 
-      </DarkModeProvider>
-    </>
+  const addToCard = (property) => {
+    setCard([...card, property]);
+  };
+
+  const deleteFromcard = (propertyName) => {
+    const updatedCard = card.filter(
+      (property) => property.name !== propertyName
+    );
+
+    setCard(updatedCard);
+  };
+
+  return (
+    <DarkModeProvider>
+      <Nav />
+      <Hero />
+      <About />
+      <PopularAreas />
+      <Properties addToCard={addToCard} />
+      <CardPage card={card} onDeleteFromCard={deleteFromcard} />
+      <Services />
+      <Clients />
+      <Contact />
+      <Footer />
+    </DarkModeProvider>
   );
 }

@@ -1,18 +1,14 @@
-import React, { useState } from 'react'
-import logo from "../assets/images/logo.png"
-import { navlinks } from './export'
-import { FaPhone, FaEnvelope,FaBars,FaTimes } from 'react-icons/fa';
-
-
+import React, { useState } from "react";
+import logo from "../assets/images/logo.png";
+import { navlinks } from "./export";
+import { FaPhone, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  
-const [isOpen , setIsOpen ] = useState(false)
-
-const toggleMenu = () => {
-  setIsOpen(!isOpen)
-}
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
@@ -33,7 +29,11 @@ const toggleMenu = () => {
           {navlinks.map((nav, index) => (
             <ul>
               <li>
-                <a className='hover:bg-orange-400 px-2 py-1  rounded-md' key={index} href={nav.href}>
+                <a
+                  className="hover:text-orange-400 px-2 py-1  rounded-md"
+                  key={index}
+                  href={nav.href}
+                >
                   {nav.label}
                 </a>
               </li>
@@ -64,6 +64,6 @@ const toggleMenu = () => {
       </div>
     </>
   );
-}
+};
 
-export default Nav
+export default Nav;

@@ -51,7 +51,7 @@ const Hero = () => {
           </div>
           <div className=" flex-col gap-1 flex">
             <label className="ml-3 font-semibold" htmlFor="guesthouse">
-             GUEST HOUSE 
+              GUEST HOUSE
             </label>
             <select
               className=" border-b-4 p-2 border-orange-500 "

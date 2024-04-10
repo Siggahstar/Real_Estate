@@ -1,25 +1,54 @@
-import React from 'react'
-import PropertyCard from '../components/PropertyCard'
-import { property } from '../components/export'
+import React from "react";
+import PropertyCard from "../components/PropertyCard";
+import { property } from "../components/export";
+import PropTypes from "prop-types";
 
-
-const Properties = () => {
+const Properties = ({ addToCard }) => {
   return (
-    <section className='lg:px-[150px] py-20 mb-20 px-10 '>
-    <div className='flex flex-col gap-3'> 
-      <div className='flex flex-col items-start gap-4'>
-        <p className='text-red-500 text-2xl '>PROPERTIES</p>
-        <h1 className='text-4xl font-semibold max-w-[400px]'>Explore The Latest Properties Available</h1>
-      </div>
-      <div className=' grid grid-cols-3 gap-8 max-lg:grid-cols-1'>
-          {property.map((prop) =>(
-            <PropertyCard imgURL={prop.images} address={prop.address} name={prop.name} owner={prop.owner} price={prop.price} about={prop.about} bed={prop.bed} area={prop.area} bath={prop.bath} {...property} />
+    <section id="properties" className="lg:px-[50px] py-20 mb-20 px-10 ">
+      <div className="flex flex-col gap-3">
+        <div className="flex flex-col items-start gap-4">
+          <p data-aos="fade-down" className="text-red-500 text-2xl ">
+            PROPERTIES
+          </p>
+          <h1
+            data-aos="fade-right"
+            data-aos-delay="600"
+            className="text-4xl mb-5 font-semibold max-w-[400px]"
+          >
+            Explore The Latest Properties Available
+          </h1>
+        </div>
+        <div className=" grid grid-cols-3 gap-8 max-lg:grid-cols-1">
+          {property.map((prop) => (
+            <PropertyCard addToCard={addToCard} property={prop} />
           ))}
-      </div>
-      
-    </div>
-    </section>
-  )
-}
+        </div>
 
-export default Properties
+        <div className="flex justify-center gap-5">
+          <button
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="px-5 bg-red-500 rounded-md py-2 mt-10 text-white text-2xl font-semibold"
+          >
+            {" "}
+            Load More
+          </button>
+          <button
+            data-aos="fade-up"
+            data-aos-delay="600"
+            className="px-5 bg-red-500 rounded-md py-2 mt-10 text-white text-2xl font-semibold"
+          >
+            {" "}
+            View Card
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+Properties.propTypes = {
+  addToCard: PropTypes.func.isRequired,
+};
+export default Properties;
