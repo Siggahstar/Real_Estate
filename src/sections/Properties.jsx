@@ -3,9 +3,10 @@ import PropertyCard from "../components/PropertyCard";
 import { property } from "../components/export";
 import PropTypes from "prop-types";
 
-const Properties = ({ addToCard }) => {
+const Properties = ({ addToCard, darkMode }) => {
   return (
-    <section id="properties" className="lg:px-[50px] py-20 mb-20 px-10 ">
+    <div className={darkMode? "bg-black text-white" : ""}>
+    <section id="properties" className="lg:px-[50px] py-20 px-10 ">
       <div className="flex flex-col gap-3">
         <div className="flex flex-col items-start gap-4">
           <p data-aos="fade-down" className="text-red-500 text-2xl ">
@@ -21,7 +22,7 @@ const Properties = ({ addToCard }) => {
         </div>
         <div className=" grid grid-cols-3 gap-8 max-lg:grid-cols-1">
           {property.map((prop) => (
-            <PropertyCard addToCard={addToCard} property={prop} />
+            <PropertyCard addToCard={addToCard} property={prop} darkMode={darkMode} />
           ))}
         </div>
 
@@ -45,6 +46,7 @@ const Properties = ({ addToCard }) => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

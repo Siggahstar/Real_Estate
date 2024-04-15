@@ -6,7 +6,35 @@ export default {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        dark: '#333333',
+        darker: '#1a1a1a',
+      },
+    },
   },
-  plugins: [],
-}
+  variants: {
+    extend: {
+      backgroundColor: ['dark', 'dark:hover', 'dark:focus'],
+      textColor: ['dark', 'dark:hover', 'dark:focus'],
+    },
+  },
+  plugins: [
+
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.filter-invert': {
+          filter: 'invert(1)',
+        },
+      };
+
+      addUtilities(newUtilities, ['dark']);
+    },
+  ],
+};
+
+
+
+
+
+  

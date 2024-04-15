@@ -5,9 +5,10 @@ import img3 from "../assets/images/area3.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const PopularAreas = () => {
+const PopularAreas = ({darkMode}) => {
   return (
-    <section className=" bg-red-100 my-20 mx-10 px-20 max-lg:px-5  max-lg:mx-0 py-20">
+    <div className={darkMode? "bg-black text-white " : ""} >
+    <section className={` mx-10 px-20 max-lg:px-5  max-lg:mx-0 py-20   ${darkMode? "bg-slate-700" : "bg-red-100"}`}>
       <div>
         <div className="flex justify-between max-lg:flex-col gap-5 items-center">
           <div className="flex flex-col gap-5">
@@ -80,6 +81,7 @@ const PopularAreas = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

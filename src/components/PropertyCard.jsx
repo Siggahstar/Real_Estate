@@ -1,7 +1,6 @@
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { MdVideocam, MdPhotoCamera, MdLocationOn } from "react-icons/md";
-
 import {
   FaBed,
   FaRulerCombined,
@@ -12,14 +11,14 @@ import {
   FaShoppingCart,
 } from "react-icons/fa";
 
-const PropertyCard = ({ property, addToCard }) => {
+const PropertyCard = ({ property, addToCard , darkMode}) => {
   const { images, address, name, price, about, bed, bath, area, owner } =
     property;
 
   return (
     <div
       data-aos="zoom-in"
-      className="flex shadow-lg hover:shadow-2xl flex-col border-2 rounded-3xl "
+      className={`flex shadow-lg hover:shadow-2xl flex-col border-2 rounded-3xl ${darkMode? "text-white bg-slate-900 border-none" : ""} `}
     >
       <div
         className="w-full h-[250px] rounded-3xl flex flex-col  justify-between pb-4 px-5 pt-5"
@@ -72,7 +71,15 @@ const PropertyCard = ({ property, addToCard }) => {
           <div className="flex text-red-500 gap-4">
             <FaShareAlt />
             <FaHeart />
-            <div>
+            <div className="flex flex-col gap-2">       
+            <button
+                className="p-2 rounded-2xl bg-red-200 hover:shadow-2xl hvoer:text-lg hover:text-black"
+               
+              >
+              
+               View More
+              </button>
+  
               <button
                 className="p-2 rounded-2xl bg-red-200 hover:shadow-2xl hvoer:text-lg hover:text-black"
                 onClick={() => addToCard(property)}
@@ -80,6 +87,7 @@ const PropertyCard = ({ property, addToCard }) => {
                 {" "}
                 Add To card
               </button>
+             
             </div>
           </div>
         </div>

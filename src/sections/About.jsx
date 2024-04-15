@@ -1,11 +1,11 @@
 import React from "react";
 import aboutimg from "../assets/images/about.jpg";
 
-const About = () => {
+const About = ({darkMode}) => {
   return (
-    <div className="">
-      <section id="about" className="pt-10 max-lg:mt-[400px] max-sm:mt-[500px]">
-        <div className="flex justify-center gap-20 lg:mt-20 max-lg:flex-col  max-lg:items-center lg:px-5 max-lg:px-10">
+    <div  className={darkMode? " bg-black" : "bg-white"}>
+      <section id="about" className="pt-10 max-lg:mt-[0px]  max-lg:pt-[500px]">
+        <div className="flex justify-center gap-20 lg:mt-20 max-lg:flex-col  max-lg:items-center lg:px-10 lg:pb-10 lg:pt-10 max-lg:px-10">
           <div>
             <img
               data-aos="zoom-in"
@@ -17,7 +17,7 @@ const About = () => {
             />
           </div>
           <div className="flex-col flex gap-10 items-start  lg:mt-20">
-            <p data-aos="zoom-in" className="text-6xl font-semibold ">
+            <p data-aos="zoom-in" className={`text-6xl font-semibold  ${darkMode? "text-white" : ""} `}>
               Who We Are{" "}
             </p>
             <h1 data-aos="zoom-in" className="text-4xl text-orange-400">

@@ -1,11 +1,11 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-const TestimonialCard = ({ image, name, text, feedback }) => {
+const TestimonialCard = ({ image, name, text, feedback , darkMode}) => {
   return (
     <div
       data-aos
-      className="flex flex-col gap-5 border-2 rounded-2xl p-5 border-red-500 "
+      className={`flex flex-col gap-5 border-2 rounded-2xl p-5 ${darkMode? "bg-slate-900 text-white border-none" : " "} border-red-500`}
     >
       <div className="flex gap-5 items-center max-lg:flex-col">
         <img src={image} width={100} alt="" />
@@ -14,7 +14,7 @@ const TestimonialCard = ({ image, name, text, feedback }) => {
           <p>{text}</p>
         </div>
       </div>
-      <p className="max-w-[300px]">{feedback}</p>
+      <p className="lg:max-w-[300px] ">{feedback}</p>
 
       <div className="flex text-red-500 gap-3">
         <FaStar />

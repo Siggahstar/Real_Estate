@@ -1,22 +1,24 @@
 import React from "react";
 import { client } from "../components/export";
 import TestimonialCard from "../components/TestimonialCard";
+import { CgDarkMode } from "react-icons/cg";
 
-const Clients = () => {
+const Clients = ( {darkMode}) => {
   return (
-    <section className="m-10 p-10 ">
+    <section className={`py-[100px] px-20 ${darkMode? "bg-black" : "  "}`}>
       <div>
         <div className="flex flex-col mb-10 gap-3">
-          <p className="text-lg font-semibold text-red-300">TESTIMONIALS</p>
-          <h1>What our Clients Are are Saying About Us</h1>
+          <p className="text-3xl font-semibold text-red-500 ">TESTIMONIALS</p>
+          <h1   className="text-4xl mb-5 font-semibold max-w-[400px]" >What our Clients Are are Saying About Us</h1>
         </div>
-        <div className="grid-cols-3 grid gap-10">
+        <div className="grid-cols-3 grid max-lg:grid-cols-2 max-sm:grid-cols-1 gap-10">
           {client.map((client) => (
-            <TestimonialCard {...client} />
+            <TestimonialCard  darkMode={darkMode} {...client} />
           ))}
         </div>
       </div>
     </section>
+  
   );
 };
 

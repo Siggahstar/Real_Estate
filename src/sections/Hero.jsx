@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { useDarkMode } from "../components/DarkModeContext";
 import heroimg from "../assets/images/hero1.webp";
+import { FaSun, FaMoon } from 'react-icons/fa';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Hero = () => {
+const Hero = ({toggleDarkMode, darkMode}) => {
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -14,15 +14,20 @@ const Hero = () => {
     });
   }, []);
 
-  const { darkMode, toggleDarkMode } = useDarkMode();
+
 
   return (
-    <div className={`${darkMode ? "dark bg-black" : "light bg-white "}`}>
+    <div  className={darkMode? "dark bg-black" : ""}>
       <section
-        className="mx-10  m-auto  w-[95%] gap-[500px] max-lg:mx-4 max-lg:px-5 flex-cols pt-28 h-[600px]  rounded-2xl max-lg:pb-[50px] px-[100px] mb-20 max"
+        className="mx-10  m-auto  w-[95%] gap-[500px] max-lg:mx-4 max-lg:px-5 flex-cols pt-28 h-[600px]  rounded-2xl max-lg:pb-[50px] px-[100px] max"
         id="hero"
         style={{ backgroundImage: `url(${heroimg})` }}
+
       >
+
+    <div className="fixed top-[150px] right-1 p-5 bg-red-500 z-10 rounded-full " onClick={toggleDarkMode}>
+      {darkMode ? <FaMoon size={24} /> : <FaSun size={24} />}
+    </div>
         <div className="flex flex-col gap-10 ">
           <h1
             data-aos="fade-up"
@@ -37,20 +42,21 @@ const Hero = () => {
         </div>
         <div
           data-aos="fade-up"
-          className="flex mt-[150px] bg-slate-200 shadow-xl  max-lg:gap-4 gap-10 max-lg:flex-col justify-center max-lg:mt-[270px] max-lg:mx-1  w-full lg:items-center   max-lg:w-full rounded-md  p-5 "
+          className={`flex mt-[150px] shadow-xl  max-lg:gap-4 gap-10 max-lg:flex-col justify-center max-lg:mt-[270px] max-lg:mx-1  w-full lg:items-center ${darkMode? "bg-slate-700" :  "bg-slate-200"}   max-lg:w-full rounded-md  p-5 `}
         >
           <div className="flex gap-1 flex-col ">
-            <label className="ml-3 font-semibold" htmlFor="address">
+            <label className={`ml-3 font-semibold  ${darkMode? "text-white" : ""}`} htmlFor="address">
               ADDRESS
             </label>
             <input
               className="p-3 border-1 border-white"
               id="address"
               placeholder="Enter an address, region or city "
+              autoComplete="username"
             ></input>
           </div>
           <div className=" flex-col gap-1 flex">
-            <label className="ml-3 font-semibold" htmlFor="guesthouse">
+            <label className={`ml-3 font-semibold  ${darkMode? "text-white" : ""}`} htmlFor="guesthouse">
               GUEST HOUSE
             </label>
             <select
@@ -58,7 +64,7 @@ const Hero = () => {
               name="guesthouses"
               id="guesthouse"
             >
-              <option className="hidden" value="">
+              <option className={`hidde" value="" `}>
                 Select Guest house
               </option>
               <option value="">Akardhouse</option>
@@ -67,7 +73,7 @@ const Hero = () => {
             </select>
           </div>
           <div className=" flex-col gap-1 flex">
-            <label className="ml-3 font-semibold" htmlFor="category">
+            <label className={`ml-3 font-semibold  ${darkMode? "text-white" : ""}`} htmlFor="category">
               CATEGORY
             </label>
             <select

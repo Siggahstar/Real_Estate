@@ -3,7 +3,7 @@ import logo from "../assets/images/logo.png";
 import { navlinks } from "./export";
 import { FaPhone, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 
-const Nav = () => {
+const Nav = ( {darkMode}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,11 +11,13 @@ const Nav = () => {
   };
 
   return (
-    <>
-      <div className="flex justify-around p-4 items-center bg-slate-50 sticky max-lg:justify-between top-0 z-10 w-full pb-1 px-3">
-        <div>
-          <img width={100} src={logo} alt="logo image" />
-        </div>
+   <>
+   
+      <div className={`flex justify-around p-4 items-center ${darkMode?   "bg-black text-white " : "bg-slate-50 " } sticky max-lg:justify-between top-0 z-10 w-full pb-1 px-3`}>
+      <div id="logo">
+  <img src={logo} alt="" class={`lg:w-[150px] w-[120px] ${darkMode? "filter-invert" : "null"}`}/>
+</div>
+
         <div>
           <div className="lg:hidden" onClick={toggleMenu}>
             {isOpen ? (
