@@ -11,6 +11,9 @@ export default {
         dark: '#333333',
         darker: '#1a1a1a',
       },
+      animation: {
+        spin: 'spin 2s linear infinite',
+      },
     },
   },
   variants: {

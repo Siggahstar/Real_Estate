@@ -50,7 +50,4 @@ const Properties = ({ addToCard, darkMode }) => {
   );
 };
 
-Properties.propTypes = {
-  addToCard: PropTypes.func.isRequired,
-};
 export default Properties;
