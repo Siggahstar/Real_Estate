@@ -5,7 +5,7 @@ import { CgDarkMode } from "react-icons/cg";
 
 const Clients = ( {darkMode}) => {
   return (
-    <section className={`py-[100px] px-20 ${darkMode? "bg-black" : "  "}`}>
+    <section id="testimonials" className={`py-[100px] px-20 ${darkMode? "bg-black" : "  "}`}>
       <div>
         <div className="flex flex-col mb-10 gap-3">
           <p className="text-3xl font-semibold text-red-500 ">TESTIMONIALS</p>

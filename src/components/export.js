@@ -46,9 +46,9 @@ export const property = [
   },
   {
     images: prop3,
-    address: "49 DC townhall alex",
+    address: "Doual Cameroon",
     name: "Duplex sea facing for rent",
-    price: "$ 652.18",
+    price: "100000 FCFA ",
     about:
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood",
     bed: 4,
@@ -58,9 +58,9 @@ export const property = [
   },
   {
     images: prop4,
-    address: "Underground street 20 texax",
+    address: "Buea Cameroon",
     name: "Villa with Side View",
-    price: "$ 876.13",
+    price: "200,000 FCFA ",
     about:
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood",
     bed: 4,
@@ -70,7 +70,7 @@ export const property = [
   },
   {
     images: prop5,
-    address: "Rubari London Hills",
+    address: "Yaounde Cameroon",
     name: "Awesome villa for rent",
     price: "$ 341.83",
     about:
@@ -82,7 +82,7 @@ export const property = [
   },
   {
     images: prop6,
-    address: "Northean fersh alice",
+    address: "Buea Cameroon",
     name: "Street Farm for sale",
     price: "$ 675.23",
     about:
@@ -130,42 +130,42 @@ export const services = [
 export const client = [
   {
     image: client1,
-    name: "Dana Gilmore",
+    name: "Fonji Daniel",
     text: "Excellent team!",
     feedback:
       "The WP Estate team did an outstanding job helping me buy my first home. The high level of service and dedication",
   },
   {
     image: client2,
-    name: "Ana Anderson",
+    name: "Fonji Daniel",
     text: "Very good work",
     feedback:
       "The WP Estate team did an outstanding job helping me buy my first home. The high level of service and dedication",
   },
   {
     image: client3,
-    name: "Albert adame",
+    name: "Fonji Daniel",
     text: "Very well",
     feedback:
       "The WP Estate team did an outstanding job helping me buy my first home. The high level of service and dedication",
   },
   {
     image: client4,
-    name: "Dana Gilmore",
+    name: "Fonji Daniel",
     text: "Excellent team!",
     feedback:
       "The WP Estate team did an outstanding job helping me buy my first home. The high level of service and dedication",
   },
   {
     image: client5,
-    name: "Alex gilmore",
+    name: "Fonji Daniel",
     text: "Excellent team!",
     feedback:
       "The WP Estate team did an outstanding job helping me buy my first home. The high level of service and dedication",
   },
   {
     image: client6,
-    name: "Sivay Ashbi",
+    name: "Fonji Daniel",
     text: "Excellent team!",
     feedback:
       "The WP Estate team did an outstanding job helping me buy my first home. The high level of service and dedication",
@@ -180,7 +180,7 @@ export const navlinks = [
     {label: "PROPERTIES", href: "#properties" , },
     {label: "SERVICES", href: "#services" , },
     {label: "TESTIMONIALS", href: "#testimonials" , },
-    {label: "CONTACTS", href: "#contacts" , }
+    {label: "CONTACTS", href: "#contact" , }
 
 
 ]

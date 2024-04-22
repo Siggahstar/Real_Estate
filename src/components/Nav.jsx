@@ -49,13 +49,13 @@ const Nav = ( {darkMode}) => {
         </div>
       </div>
       <div
-        className="mx-2 my-2 bg-blue-900 flex flex-col w-[95vw] text-lg text-white rounded-2xl font-semibold lg:hidden items-center fixed top-[61px] z-10
+        className="mx-2 my-2 bg-gradient-to-br from-blue-300 to-red-900 flex flex-col w-[95vw] text-lg text-white rounded-2xl font-semibold lg:hidden items-center fixed top-[61px] z-10
     "
       >
         {isOpen
           ? navlinks.map((nav, index) => (
               <ul>
-                <li>
+                <li className="hover:text-yellow-400">
                   <a key={index} href={nav.href}>
                     {nav.label}
                   </a>
