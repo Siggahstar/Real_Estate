@@ -1,7 +1,6 @@
 import React from "react";
 import PropertyCard from "../components/PropertyCard";
 import { property } from "../components/export";
-import PropTypes from "prop-types";
 
 const Properties = ({ addToCard, darkMode }) => {
   return (

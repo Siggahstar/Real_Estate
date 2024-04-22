@@ -22,7 +22,7 @@ import { GoLaw } from "react-icons/go";
 export const property = [
   {
     images: prop1,
-    address: "6Downtown, Las Vegas",
+    address: "Kumba Cameroon",
     name: "Villa with Amazing View",
     price: "$ 213.23",
     about:
@@ -34,7 +34,7 @@ export const property = [
   },
   {
     images: prop2,
-    address: "Meadows Village, Las Vegas",
+    address: "Limbe Cameroon",
     name: "Townhouse for Sale",
     price: "$ 345.18",
     about:
@@ -46,7 +46,7 @@ export const property = [
   },
   {
     images: prop3,
-    address: "Doual Cameroon",
+    address: "Douala Cameroon",
     name: "Duplex sea facing for rent",
     price: "100000 FCFA ",
     about:

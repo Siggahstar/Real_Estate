@@ -1,4 +1,5 @@
 import React from "react";
+import "aos/dist/aos.css";
 
 const Contact = ({ darkMode }) => {
   return (
@@ -6,8 +7,9 @@ const Contact = ({ darkMode }) => {
       id="contact"
       className={`${darkMode ? "bg-black" : "bg-red-100 p-10"}`}
     >
-      <div className={`flex justify-center gap-10 p-10 max-lg:flex-col max-lg:items-center`}>
-        <div
+      <div  className={`flex justify-center gap-10 p-10 max-lg:flex-col max-lg:items-center`}>
+        <div 
+          data-aos="fade-up" data-aos-delay="200"
           className={`flex flex-col gap-4 p-10 justify-center ${
             darkMode ? "bg-slate-900 text-w" : "bg-white"
           }  w-[600px] max-lg:w-[400px] rounded-lg`}
@@ -39,6 +41,8 @@ const Contact = ({ darkMode }) => {
           <button className="bg-red-500 rounded-md p-3 "> SEND MAIL</button>
         </div>
         <div
+
+data-aos="fade-up" data-aos-delay="400"
           className={`flex flex-col justify-center gap-5 ${
             darkMode ? "text-white" : ""
           }  `}

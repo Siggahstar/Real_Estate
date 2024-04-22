@@ -1,7 +1,6 @@
 import React from "react";
 import { client } from "../components/export";
 import TestimonialCard from "../components/TestimonialCard";
-import { CgDarkMode } from "react-icons/cg";
 
 const Clients = ( {darkMode}) => {
   return (
